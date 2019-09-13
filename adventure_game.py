@@ -89,7 +89,7 @@ def defeated():
 
 def won():
     pause('Congratulations ! You Have Won, You have got the Llama crystal!!')
-    beginning()
+    try_again()
 
 
 def try_again():
@@ -107,7 +107,7 @@ def try_again():
 
 def moxi_fight():
     answer = input("Choose (1) to fight or (2) to run away ?")
-    if int(answer) == 1:
+    if answer == "1":
         pause("Pick up your " + weapon)
         pause("AtLeast, you are trying!")
         if weapon == "Golden Scar":
@@ -120,7 +120,7 @@ def moxi_fight():
         elif weapon == "Heavy Sniper":
             pause("It's easy for you to shot on moxi with that sniper !!")
             won()
-    elif int(answer) == 2:
+    elif answer == "2":
         back_to_tilted()
     else:
         print("Enter a valid number.")
@@ -129,7 +129,7 @@ def moxi_fight():
 
 def ragnarok_fight():
     answer = input("Choose (1) to fight or (2) to run away ?")
-    if int(answer) == 1:
+    if answer == "1":
         pause("Pick up your " + weapon)
         pause("Ragnarok is really strong enemy, but keep going.")
         if weapon == "Golden Scar":
@@ -143,7 +143,7 @@ def ragnarok_fight():
         elif weapon == "Heavy Sniper":
             pause("Ragnarok has smashed your weapon.")
             defeated()
-    elif int(answer) == 2:
+    elif answer == "2":
         back_to_tilted()
     else:
         print("Enter a valid number.")
@@ -152,11 +152,11 @@ def ragnarok_fight():
 
 def redline_fight():
     answer = input("Choose (1) to fight or (2) to run away ?  ")
-    if int(answer) == 1:
+    if answer == "1":
         pause("Pick up your " + weapon)
         pause("No Way!! It's RedLine bro, you are dead.")
         defeated()
-    elif int(answer) == 2:
+    elif answer == "2":
         back_to_tilted()
     else:
         print("Enter a valid number.")
