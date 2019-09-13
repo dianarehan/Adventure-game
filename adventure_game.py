@@ -118,7 +118,8 @@ def moxi_fight():
             pause2("One headshot with your M16 is enough.")
             won()
         elif weapon == "Heavy Sniper":
-            pause("Moxi is the fastest ever, you can't kill her with a sniper!")
+            pause("Moxi is the fastest ever,\
+you can't kill her with a sniper!")
             defeated()
     elif answer == "2":
         back_to_tilted()
