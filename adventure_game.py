@@ -24,7 +24,8 @@ def countdown(n):
 
 def beginning():
     pause("You are waiting for the battle plane in 'paradise palms'")
-    pause("Waiting to go to 'Tilted Towers', a big city in the Battle Royale arena.")
+    pause("Waiting to go to 'Tilted Towers',\
+ a big city in the Battle Royale arena.")
     pause('You are taking the journey the long way!')
     pause2('You are almost there!!')
     countdown(3)
@@ -37,9 +38,9 @@ def start_game():
     print("\n\n\n")
     pause2("well, you have arrived.")
     pause("You find yourself standing in 'Tilted Towers', \
-the Volcano erupted and destroyed most of it.")
+ the Volcano erupted and destroyed most of it.")
     pause("In front of you is the 'High Rise Building', \
-Get in and get the 'Llama crystal'.")
+ Get in and get the 'Llama crystal'.")
     tk_inp_house()
 
 
@@ -62,9 +63,13 @@ weapon = random.choice(chest)
 
 def at_tiltedtowers():
     print("\n\n\n")
-    pause("You are in front of the gate of the building but you don't know what to do.")
-    pause("You entered the building, you look everywhere till you find out a big chest.")
-    pause('You are about to open it out when you heard foot steps coming from outside.')
+    pause("You are in front of the\
+ gate of the building\
+ but you don't know what to do.")
+    pause("You entered the building, you\
+ look everywhere till you find out a big chest.")
+    pause('You are about to open it out when\
+ you heard foot steps coming from outside.')
     pause("\nYou quickly open the chest to find out a " + "' " + weapon + " '")
     pause('Uh Oh!\nThe door is opened')
     enemy = random.choice(enemies)
@@ -84,7 +89,7 @@ def defeated():
 
 def won():
     pause('Congratulations ! You Have Won, You have got the Llama crystal!!')
-    try_again()
+    beginning()
 
 
 def try_again():
@@ -107,7 +112,7 @@ def moxi_fight():
         pause("AtLeast, you are trying!")
         if weapon == "Golden Scar":
             pause2("You have got Golden scar, it's a strong weapon \
-don't worry.")
+ don't worry.")
             won()
         elif weapon == "M16":
             pause2("One headshot with your M16 is enough.")
@@ -119,7 +124,7 @@ don't worry.")
         back_to_tilted()
     else:
         print("Enter a valid number.")
-        try_again()
+        moxi_fight()
 
 
 def ragnarok_fight():
@@ -128,10 +133,12 @@ def ragnarok_fight():
         pause("Pick up your " + weapon)
         pause("Ragnarok is really strong enemy, but keep going.")
         if weapon == "Golden Scar":
-            pause2("This Scar is the most suitable weapon to defeat ragnarok, it's a strong weapon.")
+            pause2("This Scar is the most suitable weapon\
+ to defeat ragnarok, it's a strong weapon.")
             won()
         elif weapon == "M16":
-            pause2("M16 is a strong weapon, but unfortunately ragnarok is stronger.")
+            pause2("M16 is a strong weapon, but\
+ unfortunately ragnarok is stronger.")
             defeated()
         elif weapon == "Heavy Sniper":
             pause("Ragnarok has smashed your weapon.")
@@ -140,7 +147,7 @@ def ragnarok_fight():
         back_to_tilted()
     else:
         print("Enter a valid number.")
-        try_again()
+        ragnarok_fight()
 
 
 def redline_fight():
@@ -153,7 +160,7 @@ def redline_fight():
         back_to_tilted()
     else:
         print("Enter a valid number.")
-        try_again()
+        redline_fight()
 
 
 start_game()
